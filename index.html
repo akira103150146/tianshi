@@ -213,6 +213,10 @@ body{line-break:strict;overflow-wrap:break-word}
 #mm-x{position:absolute;z-index:2;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);background:#0b1020cc;color:var(--gold-hi);cursor:pointer}
 .mm-name{display:none}
 
+/* 手機：配樂移進底部列，不再浮在畫面上遮住上一章／下一章 */
+#dock button.on b{color:#e5483c}
+@media (max-width:820px){#bgm{display:none!important}}
+
 </style>
 </head>
 <body class="ver-reader">
@@ -240,7 +244,7 @@ body{line-break:strict;overflow-wrap:break-word}
   <button id="d-toc"><b>☰</b>目錄</button>
   <button id="d-map"><b>◎</b>地圖</button>
   <button id="d-pf"><b>Aa</b>版面</button>
-  <button id="d-pg"><b>0%</b>進度</button>
+  <button id="d-bgm" hidden><b>♪</b>配樂</button>
 </nav>
 <nav id="side">
   <a class="brand" href="#cover"><svg class="logo-s" width="26" height="26" viewBox="0 0 64 64" role="img" aria-label="天蝕"><defs><linearGradient id="t" x1="52" y1="8" x2="27" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e5483c" stop-opacity="0"/><stop offset="1" stop-color="#e5483c"/></linearGradient></defs><circle cx="30" cy="34" r="17" fill="none" stroke="#b99b5a" stroke-width="3"/><circle cx="39" cy="27" r="16" fill="#0b1020"/><path d="M52 8 L27 42" stroke="url(#t)" stroke-width="3.2" stroke-linecap="round"/><circle cx="26.5" cy="42.5" r="4.6" fill="#e5483c"/><circle cx="26.5" cy="42.5" r="2" fill="#ffd9c9"/></svg>天蝕</a>
@@ -1690,7 +1694,7 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
     if (t.id === "backdrop") document.body.classList.remove("menu-open");
   });
   var bar = document.querySelector("#progress i");
-  var pgEl = document.querySelector("#d-pg b"), prog = state.prog || {}, heroImg = null, ticking = false;
+  var prog = state.prog || {}, heroImg = null, ticking = false;
   var resume = null;
   function progress() {
     var h = document.documentElement.scrollHeight - innerHeight;
@@ -1698,7 +1702,6 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
     var isCh = on && /^ch-/.test(on.id) && h > 0;
     var pct = isCh ? Math.min(100, Math.round(scrollY / h * 100)) : 0;
     bar.style.width = pct + "%";
-    pgEl.textContent = (isCh ? pct : 0) + "%";
     if (isCh && Math.abs((prog[on.id] || 0) - pct) >= 1) { prog[on.id] = Math.max(pct, 0); state.prog = prog; }
     trackLoc();
     if (heroImg && !matchMedia("(prefers-reduced-motion:reduce)").matches) heroImg.style.transform = "translateY(" + Math.min(scrollY, 600) * 0.12 + "px)";
@@ -1765,7 +1768,8 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
   }
   // 配樂：每章一首，讀者按了才播；切到有配樂的章會換歌，沒有配樂的頁面（封面、設定集）保持當下的播放
   var au = document.getElementById("bgm-a"), bgmEl = document.getElementById("bgm"), bgmBtn = document.getElementById("bgm-btn");
-  var want = false, curSrc = "", fadeT = null;
+  var want = false, curSrc = "", fadeT = null, dockBgm = document.getElementById("d-bgm");
+  if (Object.keys(BGM).length) dockBgm.hidden = false;
   function fadeTo(v, done) {
     clearInterval(fadeT);
     fadeT = setInterval(function () {
@@ -1773,7 +1777,7 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
       au.volume = Math.max(0, Math.min(1, au.volume + (d > 0 ? 0.06 : -0.06)));
     }, 60);
   }
-  function bgmUi() { bgmBtn.textContent = want ? "❚❚" : "▶"; bgmBtn.setAttribute("aria-label", want ? "暫停配樂" : "播放配樂"); bgmEl.classList.toggle("on", want); }
+  function bgmUi() { dockBgm.querySelector("b").textContent = want ? "❚❚" : "♪"; dockBgm.classList.toggle("on", want); bgmBtn.textContent = want ? "❚❚" : "▶"; bgmBtn.setAttribute("aria-label", want ? "暫停配樂" : "播放配樂"); bgmEl.classList.toggle("on", want); }
   function bgmFor(id) {
     var t = BGM[id]; if (!t) return;
     bgmEl.hidden = false; bgmEl.querySelector("em").textContent = t.label;
@@ -1783,9 +1787,10 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
       if (want && !au.paused) fadeTo(0, go); else go();
     }
   }
+  dockBgm.onclick = function () { bgmBtn.onclick(); };
   bgmBtn.onclick = function () {
     want = !want;
-    if (want) { if (!au.src) { var on = document.querySelector(".view.on"); if (on) bgmFor(on.id); } au.volume = 0; au.play().then(function () { fadeTo(0.6); }).catch(function () { want = false; bgmUi(); }); }
+    if (want) { if (!au.src) { var on = document.querySelector(".view.on"), ks = Object.keys(BGM); bgmFor(on && BGM[on.id] ? on.id : ks[0]); } au.volume = 0; au.play().then(function () { fadeTo(0.6); }).catch(function () { want = false; bgmUi(); }); }
     else fadeTo(0, function () { au.pause(); });
     bgmUi();
   };
@@ -1845,7 +1850,6 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
     location.hash = "cover"; show("cover");
     var el = document.querySelector("#cover .map-embed"); if (el) el.scrollIntoView({ block: "start" });
   };
-  document.getElementById("d-pg").onclick = function () { scrollTo({ top: 0 }); };
   addEventListener("scroll", function () {
     var y = scrollY; if (Math.abs(y - lastY) < 8) return;
     dock.classList.toggle("hide", y > lastY && y > 120); lastY = y;
