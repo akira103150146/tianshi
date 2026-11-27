@@ -217,6 +217,16 @@ body{line-break:strict;overflow-wrap:break-word}
 #dock button.on b{color:#e5483c}
 @media (max-width:820px){#bgm{display:none!important}}
 
+/* ── E 名詞輕註解 ── */
+.term{border-bottom:1px dotted var(--gold);cursor:help}
+.term:hover,.term.on{background:#b99b5a2e;border-bottom-style:solid}
+#gloss{position:absolute;z-index:7;width:min(300px,calc(100vw - 32px));background:var(--bg2);border:1px solid var(--gold);border-radius:10px;padding:10px 14px;box-shadow:0 12px 36px #000a;font-size:.82rem;line-height:1.8;text-align:left}
+#gloss[hidden]{display:none}
+#gloss b{display:block;color:var(--gold-hi);letter-spacing:.12em}
+#gloss p{margin:.2em 0;text-indent:0;color:var(--text)}
+#gloss small{color:var(--muted);font-size:.7rem;letter-spacing:.1em}
+:root[data-theme=paper] #gloss{background:#fbf6ea}
+
 </style>
 </head>
 <body class="ver-reader">
@@ -238,6 +248,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <button id="locchip" type="button" hidden><i></i><span></span><em>›</em></button>
 <div id="locmini" hidden><div class="lm-frame"></div><button type="button" class="lm-open" aria-label="展開地圖"><span></span></button></div>
 <div id="mapmodal" hidden role="dialog" aria-label="世界地圖"><div class="mm-box"><button id="mm-x" aria-label="關閉">✕</button><div class="mm-frame"></div><p class="mm-name"></p></div></div>
+<div id="gloss" hidden role="dialog" aria-live="polite"><b></b><p></p><small></small></div>
 <div id="bgm" hidden><button id="bgm-btn" type="button" aria-label="播放配樂">▶</button><span class="bgm-t"><b>配樂</b><em></em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
 <audio id="bgm-a" loop preload="none"></audio>
 <nav id="dock" aria-label="快速操作">
@@ -268,10 +279,10 @@ body{line-break:strict;overflow-wrap:break-word}
   <p><a class="enter" href="#settings">進入設定集 →</a></p>
   </div>
 </section>
-<section class="view" id="ch-0"><header class="ch-hero"><img src="img/5b9e8c04db-1600.webp" srcset="img/5b9e8c04db-800.webp 800w, img/5b9e8c04db-1600.webp 1600w" sizes="(max-width:820px) 100vw, 980px" width="1600" height="900" decoding="async" fetchpriority="high" alt="掃把星"><div class="ch-hero-t"><div class="chapter-no">序　章</div><h2 class="chapter-title">序章　掃把星</h2></div></header><p>無光區沒有天空。</p>
+<section class="view" id="ch-0"><header class="ch-hero"><img src="img/5b9e8c04db-1600.webp" srcset="img/5b9e8c04db-800.webp 800w, img/5b9e8c04db-1600.webp 1600w" sizes="(max-width:820px) 100vw, 980px" width="1600" height="900" decoding="async" fetchpriority="high" alt="掃把星"><div class="ch-hero-t"><div class="chapter-no">序　章</div><h2 class="chapter-title">序章　掃把星</h2></div></header><p><span class="term" role="button" tabindex="0" data-g="0">無光區</span>沒有天空。</p>
 <p>頭頂只有一層永遠散不開的灰，像一塊髒掉的玻璃，隔開了上面的光和下面的人。</p>
 <p>凱爾坐在搖晃的搬運車上，渾身是灰和油汙，望著那片灰。他在黑手套裡一下一下地轉著右手的指節。</p>
-<p>袖口上黏著熵獸的黑色殘渣，已經乾了。他摳了一下，渣掉在膝蓋上。這個月第三回遇上牠們。</p>
+<p>袖口上黏著<span class="term" role="button" tabindex="0" data-g="1">熵獸</span>的黑色殘渣，已經乾了。他摳了一下，渣掉在膝蓋上。這個月第三回遇上牠們。</p>
 <p>一個鐘頭前，牠們從側面撲進隊伍的時候，衛兵退到了鑽機後面。</p>
 <p>「保持隊形！優先保護鑽機！」</p>
 <p>貨架翻倒，壓住了一個工人。是托比。上禮拜才從他這裡借走一把起子，還沒還。</p>
@@ -279,7 +290,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>他分不清是自己急了，還是那隻手想打。那截肉早就沒有知覺，此刻卻像攥著一塊燒紅的鐵。</p>
 <p>一股殺意，從身體很深的地方湧上來──</p>
 <p>他沒有想太久。他壓低身子，鑽進最暗的那一側。鑽機的探燈在那邊閃了兩下，滅了。牠們靠近的地方，燈總是先壞。</p>
-<p>黑暗裡他看不見，也不用看。在上頭穿白的那幾年，他學會了用耳朵戰鬥：前面有東西在刮鐵皮，左邊還有兩處，殼碰著殼。耳朵還在分辨的時候，手套底下那截黑肉已經找到了牠們，前面一團燙，左邊兩團，像隔著牆也知道爐子在哪裡。右手先往最近的那一團扯過去，把整條手臂往前帶。他跟著它。</p>
+<p>黑暗裡他看不見，也不用看。在<span class="term" role="button" tabindex="0" data-g="2">上頭</span><span class="term" role="button" tabindex="0" data-g="3">穿白的</span>那幾年，他學會了用耳朵戰鬥：前面有東西在刮鐵皮，左邊還有兩處，殼碰著殼。耳朵還在分辨的時候，手套底下那截黑肉已經找到了牠們，前面一團燙，左邊兩團，像隔著牆也知道爐子在哪裡。右手先往最近的那一團扯過去，把整條手臂往前帶。他跟著它。</p>
 <p>第一隻趴在貨架上，要往縫裡鑽。凱爾借勢從側面撞上去，右拳砸在牠頸後那一節殼上。拳頭落下的那一刻，手套的縫裡透出一線紅，把那節殼照亮了一瞬，那股燙從手肘衝到指節，在殼上炸開。殼沒有裂，是碎了，整段脖子碎成黑渣，濺了他一袖子。</p>
 <p>第二隻從背後撲上來，牠頭上那道裂口張開，咬住了他的右腕，邊緣連著手套的掌側割開一道口。他不痛。這一次是他自己沒有往外抽，反而把手往裡送，送到最深的地方，攥拳。</p>
 <p>紅光從牠的裂口裡透出來。</p>
@@ -295,12 +306,12 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「托比！」</p>
 <p>底下有人咳了一聲。他把左手伸進去，摸到一截衣領，攥住，往外拖。</p>
 <p>衛兵回頭的時候，只看見一個滿臉灰的修理工在拉人。</p>
-<p>托比被拖了出來。他咳了一嘴的灰，還在笑：「黑手……這條命先欠著，跟起子一起，下禮拜還。」</p>
+<p>托比被拖了出來。他咳了一嘴的灰，還在笑：「<span class="term" role="button" tabindex="0" data-g="4">黑手</span>……這條命先欠著，跟起子一起，下禮拜還。」</p>
 <p>凱爾沒有接話。他捏了捏托比的兩條腿，又扳過他的頭，看後腦有沒有血。都沒有。</p>
 <p>「起子先還。」</p>
 <p>說完，他才發現自己的左手一直在抖。</p>
 <p>工頭多馬看了看地上那堆黑的，又看了凱爾一眼。他沒有問。</p>
-<p>他從腰包裡抽出兩張配給票，塞進托比手裡。「記工傷，這個月多一份。」</p>
+<p>他從腰包裡抽出兩張<span class="term" role="button" tabindex="0" data-g="5">配給票</span>，塞進托比手裡。「記工傷，這個月多一份。」</p>
 <p>然後他轉過身。</p>
 <p>「鑽機有沒有受損？」</p>
 <p>沒有人回答。他自己繞過去看了鑽頭，才鬆了一口氣：「還能動。停一天，這條線上兩百張嘴就少一天的飯。」</p>
@@ -309,7 +320,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「格雷那老狐狸，」他閉上眼睛，「說好只是押一趟貨。這回不讓他吐出雙倍，我就把他的房子拆了當廢鐵賣。」</p>
 <p>耳朵裡有一種很低的嗡聲，從剛才就沒停過。他假裝沒聽見。</p>
 <hr class="scene-break" />
-<p data-loc="tower" data-loc-name="廢棄輸電塔">搬運車在集合點把他丟下的時候，熄燈的鐘還沒敲，公共區的燈還亮著。下層的天沒有黑不黑的分別，鐘敲幾下，就是幾點。今天這一趟，貨翻了半架，酬勞八成又要被格雷壓價；衝進去的時候，口袋裡那疊配給票不知道掉在哪裡，大概早被踩進黑渣裡了。那是這個月剩下的口糧。他沒有回鋪子，繞了一段路，去了那座廢棄的輸電塔：塔底那堆燒焦的導線，是修理工少數不用花錢的材料，拆回去拿到黑市賣，多少能換回幾張票。</p>
+<p data-loc="tower" data-loc-name="廢棄輸電塔">搬運車在集合點把他丟下的時候，<span class="term" role="button" tabindex="0" data-g="6">熄燈的鐘</span>還沒敲，公共區的燈還亮著。下層的天沒有黑不黑的分別，鐘敲幾下，就是幾點。今天這一趟，貨翻了半架，酬勞八成又要被格雷壓價；衝進去的時候，口袋裡那疊配給票不知道掉在哪裡，大概早被踩進黑渣裡了。那是這個月剩下的口糧。他沒有回鋪子，繞了一段路，去了那座廢棄的輸電塔：塔底那堆燒焦的導線，是修理工少數不用花錢的材料，拆回去拿到黑市賣，多少能換回幾張票。</p>
 <p>他蹲在塔的底座旁，正用牙咬著手電筒，把一截燒焦的導線從接線盒裡拆出來。手套和綁帶底下，從手肘到指尖、早就不屬於他的那一截，忽然動了一下。</p>
 <p>它沒有往哪裡衝。手腕自己轉了半圈，掌心先朝著東邊，停了一下，又轉回來，最後朝著頭頂那片灰，像一根被什麼吸住的針。</p>
 <p>那截肉是黑的，硬得像殼──像什麼的殼，他從來不往下想。平常它什麼都感覺不到；此刻那片麻木底下卻有東西在翻，燙，隔著頭頂那層灰，在回應另一頭。那股燙往上爬，到手肘的交界處才停住；再往上，是還屬於活人的皮肉，痠得發麻。</p>
@@ -320,10 +331,10 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>這個念頭來得很自然，自然得不像他的。</p>
 <p>他把右手按在膝蓋上。指節自己轉了起來。他按著，停不下來。打架的時候，它常常搶在他前面；可沒有東西要打的時候，這隻手一年多沒有自己動過了。上一次這樣，是它變成現在這個樣子的那一夜。</p>
 <p>然後，灰色的天裂開了。</p>
-<p>先是一道紅。很細，像有人拿燒紅的針從上面刺穿了那層玻璃，接著那道紅拖著長長的尾巴往下拉，把整片灰照成了血的顏色。遠處，電梯站頂上的警報器遲了半拍才響起來，聲音嘶啞，像被掐住脖子。</p>
-<p>星軌防禦陣列。</p>
+<p>先是一道紅。很細，像有人拿燒紅的針從上面刺穿了那層玻璃，接著那道紅拖著長長的尾巴往下拉，把整片灰照成了血的顏色。遠處，<span class="term" role="button" tabindex="0" data-g="7">電梯站</span>頂上的警報器遲了半拍才響起來，聲音嘶啞，像被掐住脖子。</p>
+<p><span class="term" role="button" tabindex="0" data-g="8">星軌防禦陣列</span>。</p>
 <p data-loc="array" data-loc-name="星軌防禦陣列">凱爾認得那層薄薄的淡藍色網格，有東西從上面穿下來，它才會亮。此刻它在紅光周圍亮起來，一道，兩道，三道；那顆紅色的東西每撕開一道，就慢一分。</p>
-<figure class="ill"><img src="img/9cf9722d6f-1600.webp" srcset="img/9cf9722d6f-800.webp 800w, img/9cf9722d6f-1600.webp 1600w" sizes="(max-width:820px) 100vw, 980px" data-full="img/9cf9722d6f-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="紅星穿過陣列"><figcaption>紅星穿過陣列</figcaption></figure><p>那道紅本來是往東邊落的，往開採場那頭。</p>
+<figure class="ill"><img src="img/9cf9722d6f-1600.webp" srcset="img/9cf9722d6f-800.webp 800w, img/9cf9722d6f-1600.webp 1600w" sizes="(max-width:820px) 100vw, 980px" data-full="img/9cf9722d6f-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="紅星穿過陣列"><figcaption>紅星穿過陣列</figcaption></figure><p>那道紅本來是往東邊落的，往<span class="term" role="button" tabindex="0" data-g="9">開採場</span>那頭。</p>
 <p>可是穿過最後一道網格之後，那道紅偏了。下層沒有風，沒有什麼吹得偏它。它像被一根看不見的線拽著，轉了過來。</p>
 <p>轉向他。</p>
 <p data-loc="fall" data-loc-name="她的墜落">有人從上面掉下來。</p>
@@ -400,7 +411,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>從這裡走回聚落，還要穿過大半片廢墟。</p>
 <hr class="scene-break" />
 <p data-loc="shop" data-loc-name="修理鋪">廢土修理鋪的門要用肩膀頂才推得開。</p>
-<p>凱爾用腳把門踢上，摸黑找到桌上那盞結晶燈，把燈罩推起一條縫，停在最暗的地方。燈裡那塊低品質的結晶是他上個月從拾荒的老頭手上換來的，光是灰藍色的，照不遠，剛好夠看清一張臉。</p>
+<p>凱爾用腳把門踢上，摸黑找到桌上那盞結晶燈，把燈罩推起一條縫，停在最暗的地方。燈裡那塊低品質的<span class="term" role="button" tabindex="0" data-g="10">結晶</span>是他上個月從拾荒的老頭手上換來的，光是灰藍色的，照不遠，剛好夠看清一張臉。</p>
 <p>遠處，電梯站的鐘敲了九下。懷裡的少女縮了一下，攥住他的衣領，一直攥到最後一下敲完才鬆開。公共區的燈要熄了。黑市那邊不跟鐘，這時候才正要開張。</p>
 <p>他把角落那張行軍床上堆的零件撥到地上，叮叮噹噹滾了一地，再把她放上去。</p>
 <p>門外有人拍門。</p>
@@ -410,10 +421,10 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「我睡了。」</p>
 <p>「睡個神罰！你聽見警報沒有？上頭掉東西下來了，探照燈全往東邊開採場去了，穿白的也下來了，三架艇呢──」</p>
 <p>「不關我的事。」凱爾隔著門說，「大嬸，別在我門口嚷了，回去睡覺。」</p>
-<p>「你這結晶腦袋……」門外的人邊罵邊走，「哪天被那些東西叼走了，我可不給你點燈。」</p>
+<p>「你這結晶腦袋……」門外的人邊罵邊走，「哪天被那些東西叼走了，我可不給你<span class="term" role="button" tabindex="0" data-g="11">點燈</span>。」</p>
 <p>腳步聲走遠了。</p>
 <p>凱爾靠著門站了一會兒，才去爐子那邊。</p>
-<p>鍋裡還剩半鍋早上煮的菌湯。他從櫃子最裡面摸出一個罐頭，罐身上印著上頭的字，邊角都鏽了。他用起子撬開，倒了一小匙骨汁進鍋裡，想了想，又倒了一小匙。</p>
+<p>鍋裡還剩半鍋早上煮的菌湯。他從櫃子最裡面摸出一個<span class="term" role="button" tabindex="0" data-g="12">罐頭</span>，罐身上印著上頭的字，邊角都鏽了。他用起子撬開，倒了一小匙骨汁進鍋裡，想了想，又倒了一小匙。</p>
 <p>這是他這個月最後一個罐頭。</p>
 <figure class="ill"><img src="img/b9a5ff50e7-1600.webp" srcset="img/b9a5ff50e7-800.webp 800w, img/b9a5ff50e7-1600.webp 1600w" sizes="(max-width:820px) 100vw, 980px" data-full="img/b9a5ff50e7-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="一碗湯"><figcaption>一碗湯</figcaption></figure><p>湯熱了，菌類和骨頭的味道慢慢散開。他盛了一碗，端到床邊。</p>
 <p>「喝。」</p>
@@ -425,7 +436,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>凱爾在床邊的木箱上坐下來，把右手擱在膝蓋上。</p>
 <p>「上頭的狗。」</p>
 <p>「上頭。」</p>
-<p>「就是天上。」他往天花板抬了抬下巴，「我們頭上那層灰再上去。那邊的人有光，我們沒有。所以我們叫自己『沒光的』。」</p>
+<p>「就是天上。」他往天花板抬了抬下巴，「我們頭上那層灰再上去。那邊的人有光，我們沒有。所以我們叫自己『<span class="term" role="button" tabindex="0" data-g="13">沒光的</span>』。」</p>
 <p>「沒光的。」她跟著念，念完，低頭看了看自己的手，「那……我呢？」</p>
 <p>凱爾沒有回答。</p>
 <p>他把她手裡的空碗接過來，放到地上。</p>
@@ -523,11 +534,11 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>她沒有再說話。她看著他垂在身側的那隻右手。他寧可挨那一下，也沒有讓它抬起來。</p>
 <hr class="scene-break" />
 <p data-loc="homes" data-loc-name="民居・市集">那天下午，他去隔壁買配給票。</p>
-<p>「兩份。」他把這兩天修東西收來的錢全倒在桌上，又從口袋底摸出一枚缺了角的圓幣。</p>
+<p>「兩份。」他把這兩天修東西收來的錢全倒在桌上，又從口袋底摸出一枚缺了角的<span class="term" role="button" tabindex="0" data-g="14">圓幣</span>。</p>
 <p>瑪姬頭巾底下那雙眼睛從票堆上抬起來，看看那枚幣，又看看他。</p>
 <p>「兩份？」</p>
 <p>「最近胃口好。」</p>
-<p>瑪姬一邊數錢，一邊撥進鐵盒。「托比他娘早上也來過，物資票一口氣買了三張，說是濾水芯壞了。」</p>
+<p>瑪姬一邊數錢，一邊撥進鐵盒。「托比他娘早上也來過，<span class="term" role="button" tabindex="0" data-g="15">物資票</span>一口氣買了三張，說是濾水芯壞了。」</p>
 <p>「濾水器叫他拿來，我看。」</p>
 <p>「胃口好，」她把票拍在他手心，「騙鬼都不會挑個像樣的。」</p>
 <p>晚飯前，有人拍門。</p>
@@ -581,7 +592,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>進來的是個瘦高的拆解匠，腰上掛著一圈大大小小的鉗子，走路叮噹響。他把一個鐵盒擱上工作檯。盒子四面都焊死了，連條縫都沒有。</p>
 <p>「上頭丟下來的。」男人說，「我撬了兩天，撬不開。」</p>
 <p>凱爾把盒子翻過來看底，再用檯鉗夾住，左手握著一支細鑿，鑿尖抵進焊線，一點一點撬。撬完一圈，盒蓋鬆了。</p>
-<p>裡面墊著一層發黃的棉，棉上排著十幾片指甲大的黑片，每一片都刻滿了細線。</p>
+<p>裡面墊著一層發黃的棉，棉上排著十幾片指甲大的<span class="term" role="button" tabindex="0" data-g="16">黑片</span>，每一片都刻滿了細線。</p>
 <p>男人吹了聲口哨。「發了。」</p>
 <p>「死的。」凱爾說，「修不活。」</p>
 <p>「誰要修好？」男人把黑片撿進布袋，「打個洞，串起來，黑市一片換兩張票。老人家說，舊時代的神就住在這裡面，你問它什麼，它都答得出來。戴著，灰就不往身上鑽。」</p>
@@ -595,11 +606,11 @@ body{line-break:strict;overflow-wrap:break-word}
 <hr class="scene-break" />
 <p>快中午的時候，門被踢了兩下。</p>
 <p>這次進來的人得側著身子才擠得進門。他肩上扛著一根長矛，矛頭用破布包著，解開來是一截灰藍色的晶石，屋裡暗，它自己泛著一點光，尖上缺了一角。</p>
-<p>「熔星兵用的那種。」他把矛擱上檯面，「開採場撿的，主人用不著了。」</p>
-<p>他捲起袖子扶著矛。從手腕到手肘爬著一片黑斑，邊緣發亮，像燒過的紙。</p>
+<p>「<span class="term" role="button" tabindex="0" data-g="17">熔星</span>兵用的那種。」他把矛擱上檯面，「開採場撿的，主人用不著了。」</p>
+<p>他捲起袖子扶著矛。從手腕到手肘爬著一片<span class="term" role="button" tabindex="0" data-g="18">黑斑</span>，邊緣發亮，像燒過的紙。</p>
 <p>布簾的縫裡，她看見了那片黑。</p>
 <p>凱爾看了那片黑斑一眼。「多久沒喝了？」</p>
-<p>「三個月。」男人咧開嘴，「不喝以後，手腳比以前快，力氣也比以前大。開採場東邊那窩東西，商盟開了價，到現在沒人敢接。我這個月就去。」</p>
+<p>「三個月。」男人咧開嘴，「不喝以後，手腳比以前快，力氣也比以前大。開採場東邊那窩東西，<span class="term" role="button" tabindex="0" data-g="19">商盟</span>開了價，到現在沒人敢接。我這個月就去。」</p>
 <p>凱爾磨矛頭。「命也比以前短。」</p>
 <p>男人沒有接話，在屋裡踱了兩步，忽然停住，轉頭往布簾那邊看。</p>
 <p>「你這屋裡有什麼？」</p>
@@ -612,11 +623,11 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>布簾後面，她兩隻手抱著肩膀，額頭抵在膝蓋上。門閂落下來，她才把手放開。</p>
 <hr class="scene-break" />
 <p>下午來的是一個抱著孩子的女人。孩子三四歲，睡著了，臉貼在她肩上。</p>
-<p>她沒有帶東西來修，只從口袋裡摸出一張捏皺的紙片，攤在檯面上。紙是灰的，中間一塊發黑。</p>
+<p>她沒有帶東西來修，只從口袋裡摸出一張捏皺的<span class="term" role="button" tabindex="0" data-g="20">紙片</span>，攤在檯面上。紙是灰的，中間一塊發黑。</p>
 <p>「黑手，你懂這個。」她說，「我男人的。上禮拜才喝過藥，昨天量，還是這個顏色。是不是紙壞了？」</p>
 <p>凱爾拿起紙片，對著燈看了看，又放下。</p>
 <p>「紙沒壞。」</p>
-<p>女人抱孩子的手緊了一下。「那就是要去躺床了。」</p>
+<p>女人抱孩子的手緊了一下。「那就是要去<span class="term" role="button" tabindex="0" data-g="21">躺床</span>了。」</p>
 <p>「先去熔星的診所看看。」</p>
 <p>「隔壁老陳去躺過。」她把紙片收回口袋，「躺完就走了。」</p>
 <p>她抱著孩子出去，沒有關門。凱爾走過去把門帶上。</p>
@@ -669,7 +680,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「苦嗎？」她問。</p>
 <p>他看了她一眼。「苦。」</p>
 <p>「那是什麼？」</p>
-<p>「淨化劑。下層的人一個月喝一次，把身上的灰帶出來。」</p>
+<p>「<span class="term" role="button" tabindex="0" data-g="22">淨化劑</span>。下層的人一個月喝一次，把身上的灰帶出來。」</p>
 <p>「我也要喝嗎？」</p>
 <p>他把杯子擱下。「妳才來三天。下個月再說。」</p>
 <p>她點點頭，把手縮進袖子裡。</p>
@@ -774,7 +785,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「謝個神罰。」大嬸轉身從屋裡摸出一個罐頭，塞進少女懷裡，邊罵邊把她推回去，「明天早上的湯加這個。別說是我給的，那小子這個月窮得要命。」</p>
 <hr class="scene-break" />
 <p data-loc="factory" data-loc-name="熔星的站">凱爾先在熔星的站繞了一圈。站在東邊，挨著開採場，運貨的鐵籠子撞著軌道，一聲接一聲。管料的報了價，他沒有還，轉身往黑市走。</p>
-<p>鐘敲九下，公共區的燈滅了。巷口賣菌乾的老婆婆停下手，兩隻手交疊在胸口，低著頭，嘴唇動了動。那幾句禱詞凱爾也會念，在上頭念了好幾年。他從她身邊走過去，沒有停。</p>
+<p>鐘敲九下，公共區的燈滅了。巷口賣菌乾的老婆婆停下手，兩隻手交疊在胸口，低著頭，嘴唇動了動。那幾句<span class="term" role="button" tabindex="0" data-g="23">禱詞</span>凱爾也會念，在上頭念了好幾年。他從她身邊走過去，沒有停。</p>
 <p>黑市的攤子這才各自點起燈，結晶的、燈芯的，越往裡越暗。</p>
 <p data-loc="guild" data-loc-name="商盟據點">格雷的位置在黑市最裡面，最暗的那個角落。那裡只吊一盞燈，吊得很低，只照得到桌面，照不到人臉。凱爾走進去的時候，那個披著舊風衣的老人正把左眼那片放大鏡翻下來，對著桌上什麼東西看，指縫裡卡著機油和墨水。</p>
 <p>凱爾把包著布的刃擱在桌邊。</p>
@@ -791,7 +802,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>他想起出門前，她坐在行軍床邊，一句話都沒有問。</p>
 <p>「你屋裡那個，」老人又說，聲音不高，像在念一張帳單，「我替你蓋著。這一筆不在料錢裡，算你欠我的。」</p>
 <p>「我沒答應。」</p>
-<p>「你不用答應。」格雷把那截鏈子重新包好，收進桌子底下，「還有，以後誰問起你屋裡那個，就說是商盟寄放在你那兒的。這一帶，沒有人敢問我的貨。」</p>
+<p>「你不用答應。」格雷把那截鏈子重新包好，收進桌子底下，「還有，以後誰問起你屋裡那個，就說是商盟<span class="term" role="button" tabindex="0" data-g="24">寄放</span>在你那兒的。這一帶，沒有人敢問我的貨。」</p>
 <p>「她不是貨。」</p>
 <p>「在下層，」格雷終於抬起眼睛看他，渾濁的，卻很利，「不是貨的東西，活不過一個月。」</p>
 <hr class="scene-break" />
@@ -850,13 +861,13 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>「不行。」</p>
 <p>他說得太快，聲音比他自己想的還硬。他伸手越過她，把門閂推到底，喀的一聲。</p>
 <p>她的手縮了回去，像碰到燙的東西。</p>
-<p>鏈子內側的紋，跟當年那個艙上的一樣。璇璣院的東西，不會扣在普通人的手上。上頭封起來的東西，是會回來找的。到那時候，門閂擋不住，他也擋不住。</p>
+<p>鏈子內側的紋，跟當年那個艙上的一樣。<span class="term" role="button" tabindex="0" data-g="25">璇璣院</span>的東西，不會扣在普通人的手上。上頭封起來的東西，是會回來找的。到那時候，門閂擋不住，他也擋不住。</p>
 <p>他應該說點什麼。他張了張嘴，最後只是把皺掉的票攤平，擱在桌上。</p>
 <p>她回到行軍床上，抱著膝蓋，臉一直朝著門。</p>
 <p>那天夜裡，他靠著門，右手擱在膝上。手套底下又有一點燙，很淡，跟做手環那晚一樣。</p>
 <p>他把手套往下拉了一點，看了一眼手腕。它會往上爬，他知道，她也知道。</p>
 <p>下層的人，說走就走，像老陳。</p>
-<p>如果哪天走的是他，她連配給站在哪裡都不知道。票要找誰買，錢有幾種，穿白的有幾種，她一樣都不知道。</p>
+<p>如果哪天走的是他，她連<span class="term" role="button" tabindex="0" data-g="26">配給站</span>在哪裡都不知道。票要找誰買，錢有幾種，穿白的有幾種，她一樣都不知道。</p>
 <p>門閂本來就擋不住。</p>
 <hr class="scene-break" />
 <p>手環戴上的第五天，凱爾第一次帶她出門。</p>
@@ -870,7 +881,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>他看了她一眼。</p>
 <p>門一開，換班的鐘正好敲響。</p>
 <p data-loc="elev" data-loc-name="電梯站">鐘聲是從聚落中央來的。街的盡頭，灰裡插著兩座鐵塔，挨得很近。左邊那座的頂上掛著一口鐘，鐘底下有個灰白的人影，一下一下地拉著繩。</p>
-<p>「那是敲鐘的。」他說，「兩座都是電梯站。右邊那座是議會的，掛鐘的那座歸敲鐘那邊。還有一座是熔星的，在東邊，從這裡看不見。」</p>
+<p>「那是敲鐘的。」他說，「兩座都是電梯站。右邊那座是<span class="term" role="button" tabindex="0" data-g="27">議會</span>的，掛鐘的那座歸敲鐘那邊。還有一座是熔星的，在東邊，從這裡看不見。」</p>
 <p>鐘敲完第六下，她才發現自己攥著他的袖子，攥得指節發白。</p>
 <p>他低頭看了一眼。墜下來那一夜，她攥的是他的衣領，也是等鐘停了才放。</p>
 <p>她鬆開了，把手縮回袖子裡。</p>
@@ -928,7 +939,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>瑪姬看了他一眼，把紙片揉成一團丟進鐵盒，又把一張票塞進少女手裡。</p>
 <p>「拿著。第一張，不收錢。」她說，「以後要是被他們攔下來，就說妳是寄放的。說得越不耐煩越好。」</p>
 <p>「上頭的狗。」少女小聲說。</p>
-<p>「上頭的狗也有兩種。」瑪姬朝巷口抬了抬下巴，「肩上光禿禿的，是天樞衛，議會養的，剛才那兩個就是。肩上繡著一圈套一圈的環，是敲鐘那邊的，璇璣院的人。」她頓了一下，「兩種都別惹，神罰的。」</p>
+<p>「上頭的狗也有兩種。」瑪姬朝巷口抬了抬下巴，「肩上光禿禿的，是<span class="term" role="button" tabindex="0" data-g="28">天樞衛</span>，議會養的，剛才那兩個就是。肩上繡著一圈套一圈的環，是敲鐘那邊的，璇璣院的人。」她頓了一下，「兩種都別惹，神罰的。」</p>
 <p>少女往對面的牆看了一眼。他已經把臉轉開了。</p>
 <p>上一次她說上頭的狗，他還笑了一下。</p>
 <p>瑪姬把鐵盒蓋上，朝牆邊抬了抬下巴：「人還你。」</p>
@@ -1003,7 +1014,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>攤子前的人都沒有出聲。</p>
 <p>「往東邊坑裡去的，三天沒回來，」瑪姬說，「就不用等了。」</p>
 <p>她嘆了一口氣，從攤子底下摸出一盞很小的燈，燈芯還沒點過。</p>
-<p>「晚上，」她說，「去破洞那邊。給他點一盞。」</p>
+<p>「晚上，」她說，「去<span class="term" role="button" tabindex="0" data-g="29">破洞</span>那邊。給他點一盞。」</p>
 <p>她把燈塞進凱爾手裡，轉身回去收攤。</p>
 <p>凱爾低頭看著那盞燈。很輕，一隻手就握得住。</p>
 <p>那天托比走的時候，往東邊看過。他看見了，沒有問。</p>
@@ -1127,9 +1138,9 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>它在下面很遠的地方流著，從黑暗裡來，往黑暗裡去。一整條都在發光，很淡的青，邊上泛著一點白金。</p>
 <p>河光照到的地方，浮著幾塊黑色的影子，很大，就那樣懸在半空，緩緩轉著。其中一塊的邊上，有幾點燈火。</p>
 <p>「那是什麼？」</p>
-<p>「星屑之河。」他在她旁邊坐下來，腳懸在斷口外面，「下面唯一不歸議會管的光。」</p>
+<p>「<span class="term" role="button" tabindex="0" data-g="30">星屑之河</span>。」他在她旁邊坐下來，腳懸在斷口外面，「下面唯一不歸議會管的光。」</p>
 <p>「那上面有人？」</p>
-<p>「有。別的碎界，跟我們腳下這塊一樣。」他說，「下層不只這裡。只是這裡離上頭最近。」</p>
+<p>「有。別的<span class="term" role="button" tabindex="0" data-g="31">碎界</span>，跟我們腳下這塊一樣。」他說，「下層不只這裡。只是這裡離上頭最近。」</p>
 <p>她也坐下來，坐在他右邊，學他把腳懸在外面，又有點怕，往回縮了一點。他看了一眼，起身換到她的另一邊，把右手擱到外側的膝蓋上。</p>
 <p>河在下面流，沒有聲音。</p>
 <p>點燈的時候聽見的那一聲，是從這底下來的。她看著河很遠的那一頭，等了一會兒，它沒有再響。</p>
@@ -1439,7 +1450,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>是凱爾。他沒有回頭，還蹲在那個桶子前面。</p>
 <p>多馬朝那個背影抬了抬下巴。「妳看，連黑手都背得出來。」</p>
 <p>漢娜的嘴角提起來，又落下去。</p>
-<p>「坑口那籠靜蛾，是他在餵。」多馬看著自己的手，那雙手很大，指甲縫裡的黑洗不掉，「別人嫌麻煩。他每天多帶一把燈苔，說牠們替我們看門，總得讓人家吃飽。出事前那幾天，蛾老是停著不動。他是第一個跑來跟我講的。」</p>
+<p>「坑口那籠<span class="term" role="button" tabindex="0" data-g="33">靜蛾</span>，是他在餵。」多馬看著自己的手，那雙手很大，指甲縫裡的黑洗不掉，「別人嫌麻煩。他每天多帶一把燈苔，說牠們替我們看門，總得讓人家吃飽。出事前那幾天，蛾老是停著不動。他是第一個跑來跟我講的。」</p>
 <p>「然後呢？」</p>
 <p>「我報上去了。」多馬說，「上面說，產量不能掉。」</p>
 <p>他沒有再往下說。</p>
@@ -1489,14 +1500,14 @@ body{line-break:strict;overflow-wrap:break-word}
 <p>她停在瑪姬的攤子邊，往巷口外看。</p>
 <p>六個人，兩個一排。每個人身上都套著一副金屬的骨架，從腳踝一路扣到肩膀，沿著手臂和腿的外側走，每個關節都套著一道環。背上背著一個扁的匣子，匣子裡有東西在發光，灰藍色的，比凱爾桌上那盞亮得多。</p>
 <p>骨架裡面的人都很年輕。有一個看起來不比她大。他們的後頸上，背上那個匣子頂著的地方，有幾塊零碎的黑，像沒洗乾淨。</p>
-<p>「熔星的巡邏。」瑪姬不知道什麼時候站到了她旁邊，手上還抓著那疊票，「那身鐵叫外骨骼。穿上去，一個人搬得動三個人的貨，打得動那些東西。」</p>
+<p>「熔星的巡邏。」瑪姬不知道什麼時候站到了她旁邊，手上還抓著那疊票，「那身鐵叫<span class="term" role="button" tabindex="0" data-g="32">外骨骼</span>。穿上去，一個人搬得動三個人的貨，打得動那些東西。」</p>
 <p>「那天晚上他們沒有來。」</p>
 <p>「那天晚上沒有東西可收。」瑪姬哼了一聲，朝巡邏隊的後頭抬了抬下巴，「今天有。」</p>
 <p>巡邏隊在巷口停了下來。後面跟著一輛板車，車上疊著罐頭，疊得整整齊齊，鐵皮在公共區的燈下發亮。</p>
 <p>一個沒穿骨架的男人拿著一塊板子，站到車前。</p>
 <p>「家裡沒大人的，站這邊。」</p>
 <p>街上一時沒有聲音。有孩子走出來了。一個，兩個。阿塔娜西婭認得其中一個小的，是前幾天站在瑪姬攤子旁邊、臉朝著東邊的那個男人的孩子。那個男人前天走了。</p>
-<p>孩子們排成一排。拿板子的人挨個看過去，量肩膀，捏手臂，然後發一個罐頭，再發一塊穿了繩子的小鐵牌。</p>
+<p>孩子們排成一排。拿板子的人挨個看過去，量肩膀，捏手臂，然後發一個罐頭，再發一塊穿了繩子的小<span class="term" role="button" tabindex="0" data-g="34">鐵牌</span>。</p>
 <p>「四十一。」</p>
 <p>「四十二。」</p>
 <p>「妳，四十三。」</p>
@@ -1595,6 +1606,7 @@ body{line-break:strict;overflow-wrap:break-word}
 <script>
 var STORAGE_KEY = "tianshi-reader-v1";
 var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-2": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-3": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-4": {"src": "audio/758602ddcf.mp3", "label": "配樂"}};
+var GLOSS = [{"term": "無光區", "first": 0, "def": "灰層之下、看不到天空的地方，凱爾和聚落的人就住在這裡。"}, {"term": "熵獸", "first": 0, "def": "黑色硬殼的怪物，成群撲人；牠們靠近處燈會先壞，死後留黑渣。", "later": {"from": 3, "def": "黑在皮肉裡，頭上無臉只有裂口；屍體會被拖去挖結晶。"}}, {"term": "上頭", "first": 0, "def": "灰層再往上的地方；那裡的人有光，下層人自稱「沒光的」。"}, {"term": "穿白的", "first": 0, "def": "從上頭下來的白甲人員，持環桿找東西；凱爾以前也是其中之一。", "later": {"from": 2, "def": "分兩種：肩上無紋的天樞衛，和肩繡套環的璇璣院人。"}}, {"term": "黑手", "first": 0, "def": "下層人對凱爾的稱呼，他的右手總戴著黑手套。"}, {"term": "配給票", "first": 0, "def": "下層憑票領口糧；工頭也拿它發工傷的補貼。", "later": {"from": 2, "def": "商盟發的票，有換口糧的，也有換藥和濾水芯的物資票。"}}, {"term": "熄燈的鐘", "first": 0, "def": "下層沒有晝夜，鐘敲幾下就是幾點；敲九下後公共區的燈熄。"}, {"term": "電梯站", "first": 0, "def": "聚落中央的鐵塔，像一條線把這塊地吊在上頭；穿白的由此下來。", "later": {"from": 2, "def": "共三座，分屬議會、敲鐘那邊與熔星；穀糧由熔星那座運下。"}}, {"term": "星軌防禦陣列", "first": 0, "def": "有東西從上面穿下來時會亮起的淡藍色網格；凱爾說它從不算錯。"}, {"term": "開採場", "first": 0, "def": "聚落東邊的作業區；紅光與探照燈都朝那邊去，穿白的也去搜。", "later": {"from": 3, "def": "東邊的礦坑，有怪物窩；去過的人手變黑，站著朝東望，接著離開。"}}, {"term": "結晶", "first": 0, "def": "能發光的礦物，低品質的光是灰藍色，可拿來換東西。", "later": {"from": 3, "def": "取自熵獸屍體，越透越值錢，可當錢；放久會爛、傷手。"}}, {"term": "點燈", "first": 0, "def": "為死去或失蹤的人點的燈；瑪姬咒凱爾被叼走就不給他點。", "later": {"from": 2, "def": "天上每熄一顆星，下面點一盞替它亮；有人走了也點。燈要點小。"}}, {"term": "罐頭", "first": 0, "def": "印著上頭字的罐頭，下層難得的食物；凱爾這個月只剩一個。", "later": {"from": 2, "def": "只能用上頭的錢買得到。"}}, {"term": "沒光的", "first": 0, "def": "下層人的自稱，相對於上頭有光的人。"}, {"term": "圓幣", "first": 1, "def": "缺了角的圓形硬幣，凱爾買票時與錢一起交出。", "later": {"from": 2, "def": "上頭的錢；下層不認卻都收，不會像結晶爛，罐頭只能用它買。"}}, {"term": "物資票", "first": 1, "def": "買濾水芯這類物品的票；托比他娘一口氣買了三張。", "later": {"from": 2, "def": "商盟發行，換淨化劑、濾水芯、防塵布；紙灰了用它換藥。"}}, {"term": "黑片", "first": 1, "def": "刻滿細線、指甲大的黑片，上頭丟下來的；黑市當護身符買賣。"}, {"term": "熔星", "first": 1, "def": "下層一股勢力，有兵、診所和站，也賣金屬料。", "later": {"from": 4, "def": "管這一帶的勢力；巡邏隊穿外骨骼，收沒大人的孩子；當家熔鋒。"}}, {"term": "黑斑", "first": 1, "def": "不喝藥的人手臂上的發亮黑斑；男人說力氣變大，命變短。"}, {"term": "商盟", "first": 1, "def": "下層的組織，曾開價懸賞清掉東邊的怪物窩，至今沒人敢接。", "later": {"from": 2, "def": "發票給下層人的組織，與熔星一起管這一帶。"}}, {"term": "紙片", "first": 1, "def": "貼在手腕量身上的灰：紙越灰、越黑，人越糟。", "later": {"from": 2, "def": "下層人每月量一次，灰了就拿物資票換藥；東邊半個月一次。"}}, {"term": "躺床", "first": 1, "def": "熔星診所的床，喝藥壓不住的人去躺；有的會好，老陳躺完就走了。"}, {"term": "淨化劑", "first": 1, "def": "銀灰色藥粉沖水喝，很苦；下層人每月一次，把身上的灰帶出來。"}, {"term": "禱詞", "first": 1, "def": "熄燈鐘響後，有人手疊胸口低頭念的幾句話；凱爾在上頭也念過。"}, {"term": "寄放", "first": 1, "def": "格雷教的說法：屋裡的少女是商盟寄放的貨，沒人敢問。", "later": {"from": 2, "def": "下層人都這樣稱她；被攔下時就這麼說，越不耐煩越好。"}}, {"term": "璇璣院", "first": 2, "def": "敲鐘那邊的上頭機構，人員肩上繡著一圈套一圈的環。"}, {"term": "配給站", "first": 2, "def": "憑票領穀糧的站；鐵柵窗後推出牛皮紙包的穀糧，蓋著上頭的印。"}, {"term": "議會", "first": 2, "def": "上頭管事的一方，佔一座電梯站，養天樞衛；星屑之河不歸它管。"}, {"term": "天樞衛", "first": 2, "def": "肩上無紋的穿白者，議會養的，持環桿在街上巡找東西。"}, {"term": "破洞", "first": 2, "def": "聚落北邊塌掉的廣場，灰層薄，露出真正的黑與星星；人們在此點燈。"}, {"term": "星屑之河", "first": 2, "def": "斷地下方發淡青光的河，不歸議會管；住河邊的人手較乾淨。"}, {"term": "碎界", "first": 2, "def": "懸在河上的一塊塊斷地；腳下這塊也是，別的碎界上也有人住。"}, {"term": "外骨骼", "first": 4, "def": "熔星巡邏隊穿的金屬骨架，背匣發光，一人搬三人貨；穿者少活過三十。"}, {"term": "靜蛾", "first": 4, "def": "坑口籠裡養的蛾，被當成看門；出事前那幾天老停著不動。"}, {"term": "鐵牌", "first": 4, "def": "發給被收孩子的小鐵牌，刻著號；進去就沒有名字，只有號。"}];
 (function () {
   function load() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { return {}; } }
   function save() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {} }
@@ -1794,6 +1806,34 @@ var BGM = {"ch-0": {"src": "audio/758602ddcf.mp3", "label": "配樂"}, "ch-1": {
     else fadeTo(0, function () { au.pause(); });
     bgmUi();
   };
+  // 名詞輕註解：點底線詞跳出小卡；讀完（八成以上）後面的章節，說明才換成後來知道的版本
+  var gl = document.getElementById("gloss"), glOn = null;
+  function chName(n) { return n === 0 ? "序章" : "第 " + n + " 章"; }
+  function closeGloss() { gl.hidden = true; if (glOn) glOn.classList.remove("on"); glOn = null; }
+  function openGloss(t) {
+    var e = GLOSS[+t.getAttribute("data-g")]; if (!e) return;
+    closeGloss(); glOn = t; t.classList.add("on");
+    var later = e.later && ((state.prog || {})["ch-" + e.later.from] || 0) >= 80;
+    gl.querySelector("b").textContent = e.term;
+    gl.querySelector("p").textContent = later ? e.later.def : e.def;
+    gl.querySelector("small").textContent = "首次出現：" + chName(e.first);
+    gl.hidden = false;
+    var r = t.getClientRects()[0] || t.getBoundingClientRect(), w = gl.offsetWidth, h = gl.offsetHeight;
+    var left = Math.max(16, Math.min(r.left + r.width / 2 - w / 2, document.documentElement.clientWidth - w - 16));
+    var below = r.bottom + 8 + h < innerHeight - 70;  // 下面放不下（含手機底部列）就放上面
+    gl.style.left = (left + scrollX) + "px"; gl.style.top = ((below ? r.bottom + 8 : r.top - h - 8) + scrollY) + "px";
+  }
+  document.addEventListener("click", function (ev) {
+    var t = ev.target.closest && ev.target.closest(".term");
+    if (t) { if (t === glOn) closeGloss(); else openGloss(t); return; }
+    if (!gl.hidden && !gl.contains(ev.target)) closeGloss();
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") closeGloss();
+    else if ((ev.key === "Enter" || ev.key === " ") && ev.target.classList && ev.target.classList.contains("term")) { ev.preventDefault(); openGloss(ev.target); }
+  });
+  addEventListener("hashchange", closeGloss);
+  addEventListener("resize", closeGloss);
   function show(id, restoreY) {
     var target = document.getElementById(id);
     if (!target || !target.classList.contains("view")) { id = "cover"; target = document.getElementById("cover"); }
